@@ -1,5 +1,0 @@
-/home/taozhang/zjf/SystemMonitor/build/CMakeFiles/edit_cache.dir
-/home/taozhang/zjf/SystemMonitor/build/CMakeFiles/rebuild_cache.dir
-/home/taozhang/zjf/SystemMonitor/build/src/CMakeFiles/monitor.dir
-/home/taozhang/zjf/SystemMonitor/build/src/CMakeFiles/edit_cache.dir
-/home/taozhang/zjf/SystemMonitor/build/src/CMakeFiles/rebuild_cache.dir

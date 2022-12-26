@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/monitor.dir/main.cpp.o -o ../bin/monitor 

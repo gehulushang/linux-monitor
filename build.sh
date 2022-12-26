@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 rm -rf build
 DIR=`pwd`
 mkdir build
