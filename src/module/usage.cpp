@@ -51,8 +51,8 @@ void MonitorUsage::Usages() {
 
     for (auto it = kParamsMap.begin(); it != kParamsMap.end(); it++) { 
         std::cout << "  -" << it->first << "|--" 
-        << std::left << std::setw(15) << it->second
-        << "for " << it->second << " info"<< std::endl;
+                  << std::left << std::setw(15) << it->second
+                  << "for " << it->second << " info" << std::endl;
     }
 
 }

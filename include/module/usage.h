@@ -7,8 +7,8 @@
 #include <iomanip>
 #include <iostream>
 
-#include "../utils/string_util.h"
-#include "../utils/print_util.h"
+#include "utils/string_util.h"
+#include "utils/print_util.h"
 
 static std::map<std::string, std::string> kParamsMap{
     {"c","cpu"},

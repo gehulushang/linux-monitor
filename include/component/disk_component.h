@@ -5,12 +5,13 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include "component/base_component.h"
 
-class DiskComponent {
+class DiskComponent : public BaseComponent {
 public:
-    DiskComponent() {}
+    DiskComponent();
 
-    ~DiskComponent() {}
+    ~DiskComponent();
 
 private:
 

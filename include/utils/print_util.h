@@ -12,21 +12,15 @@
 
 class PrintUtil {
 public:
-    PrintUtil(): fixed_(false), precision_(DEFAULT_PRECISION), width_(0) {}
+    PrintUtil();
 
-    ~PrintUtil() {}
+    ~PrintUtil();
 
-    void SetW(const int width) {
-        width_ = width;
-    }
+    void SetW(const int width);
 
-    void SetPrecision(const int precision) {
-        precision_ = precision;
-    }
+    void SetPrecision(const int precision);
 
-    void SetFixed(bool fixed) {
-        fixed_ = fixed;
-    }
+    void SetFixed(bool fixed);
 
     template <typename ...Args>
         void PrintPlain(const Args& ...args) {
@@ -55,8 +49,11 @@ public:
             std::cout << "\033[0m" << std::endl;
         }
 
-
 private:
+    bool fixed_;
+    int precision_;
+    int width_;
+
     template <typename Arg0>
         void print_impl(const Arg0& arg0) {
             std::cout << arg0;
@@ -68,17 +65,7 @@ private:
             print_impl(args...);
         }
     
-    void prefix(const std::string prefix) {
-        std::cout << prefix;
-        if (fixed_) {
-            std::cout << std::fixed;
-        }
-        std::cout << std::setw(width_) << std::setprecision(precision_);
-    }
-
-    bool fixed_;
-    int precision_;
-    int width_;
+    void prefix(const std::string prefix);
 
 };
 #endif
