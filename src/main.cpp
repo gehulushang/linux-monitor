@@ -18,7 +18,7 @@ public:
 
     void Run() {
         LinuxMonitor instance = LinuxMonitor::GetInstance();
-        instance.component_ = std::make_shared<NetworkComponent>();
+        instance.component_ = std::make_shared<MemoryComponent>();
         instance.component_->ExportInfo();
     }
 

@@ -1,7 +1,11 @@
+#ifndef MONITOR_MODEL_H
+#define MONITOR_MODEL_H
+
 #include <string>
 #include <vector>
 
 struct SysDistributor {
+    SysDistributor();
     std::string id;
     std::string description;
     std::string release_version;
@@ -9,6 +13,7 @@ struct SysDistributor {
 };
 
 struct SysVersion {
+    SysVersion();
     std::string os;
     std::string kernel_version;
     std::string gcc_version;
@@ -18,6 +23,7 @@ struct SysVersion {
 };
 
 struct MemoryInfo {
+    MemoryInfo();
     std::int32_t mem_total;
     std::int32_t mem_used;
     std::int32_t mem_free;
@@ -72,6 +78,7 @@ struct SysIOInfo {
 };
 
 struct NetcardInfo {
+    NetcardInfo();
     std::int16_t status;
     std::string name;
     std::string inet;
@@ -79,8 +86,11 @@ struct NetcardInfo {
 };
 
 struct NetworkInfo {
+    NetworkInfo();
     bool alive;
     bool networking;
     std::vector<std::int32_t> used_ports;
     std::vector<NetcardInfo> cards;
 };
+
+#endif
