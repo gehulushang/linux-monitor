@@ -34,11 +34,13 @@ public:
 
     int GetParamsCnt();
 
-    std::vector<std::string> GetParams();
+    std::vector<std::string> GetRawParams();
 
     std::int16_t ParseParams(const int argc, char* argv[]);
 
     std::int16_t PrintUsage();
+
+    std::string GetParam();
 
     void Usage(const std::string param);
 

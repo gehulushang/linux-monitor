@@ -12,8 +12,12 @@ int MonitorUsage::GetParamsCnt() {
     return params_cnt_;
 }
 
-std::vector<std::string> MonitorUsage::GetParams() {
+std::vector<std::string> MonitorUsage::GetRawParams() {
     return raw_params_;
+}
+
+std::string MonitorUsage::GetParam() {
+    return param_;
 }
 
 std::int16_t MonitorUsage::ParseParams(const int argc, char* argv[]) {
