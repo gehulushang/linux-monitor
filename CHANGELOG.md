@@ -14,3 +14,7 @@ All notable changes to this project will be documented in this file.
 ## [0.0.3] - 2023-01-13
 ### Optimized
 -  add linux_monitor for abstraction
+
+## [0.0.4] - 2023-01-17
+### Added
+-  add thirdparty jsoncpp for json and mongoose for http
