@@ -2,11 +2,12 @@
 #include "linux_monitor.h"
 
 enum mode {Help, Cpu, Disk, Net, Mem, Sys, Thread, Version};
-std::unordered_map<std::string, mode> modeMap {{"h", mode::Help},{"?", mode::Help},
-                                        {"d", mode::Disk},{"c", mode::Cpu},
-                                        {"i", mode::Net},{"m", mode::Mem},
-                                        {"s", mode::Sys},{"t", mode::Thread},
-                                        {"v", mode::Version},};
+std::unordered_map<std::string, mode> modeMap {{"h", mode::Help},
+                                               {"?", mode::Help},
+                                            {"d", mode::Disk},{"c", mode::Cpu},
+                                            {"i", mode::Net},{"m", mode::Mem},
+                                            {"s", mode::Sys},{"t", mode::Thread},
+                                            {"v", mode::Version},};
 
 LinuxMonitor::LinuxMonitor() {}
 

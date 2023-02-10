@@ -18,3 +18,11 @@ All notable changes to this project will be documented in this file.
 ## [0.0.4] - 2023-01-17
 ### Added
 -  add thirdparty jsoncpp for json and mongoose for http
+
+## [0.0.5] - 2023-02-01
+### Added
+-  add CMakeLists in web
+
+## [0.0.6] - 2023-02-10
+### Added
+-  add abseil-cpp, folly, jsoncpp, poco and mongoose in third party

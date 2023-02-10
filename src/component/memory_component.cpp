@@ -50,7 +50,10 @@ void MemoryComponent::ExportInfo() {
 }
 
 
-
+std::string MemoryComponent::GetJsonInfo() {
+    std::string json_info;
+    return json_info;
+}
 
 std::int16_t MemoryComponent::parse_memory_info() {
     std::int16_t res{0};

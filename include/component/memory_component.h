@@ -24,6 +24,8 @@ public:
 
     void ExportInfo();
 
+    std::string GetJsonInfo();
+
 
 private:
 

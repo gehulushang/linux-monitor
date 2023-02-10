@@ -18,6 +18,8 @@ public:
 
     virtual void ExportInfo();
 
+    virtual std::string GetJsonInfo();
+
 protected:
     FileUtil futil_;
     StringUtil sutil_;
