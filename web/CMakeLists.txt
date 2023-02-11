@@ -10,7 +10,7 @@ message( "##############################################################" )
 message( "                                                              " )
 # add_definitions("-Wall -g")
 add_definitions("-Wall -O2")
-# add_definitions(-std=c++14)
+add_definitions(-std=c++14)
 
 set(CMAKE_THIRDPARTY_DIRECTORY ${PROJECT_SOURCE_DIR}/..)
 include_directories(

@@ -5,10 +5,10 @@
 #include "ipc/future_task.h"
 
 int main(int argc, char* argv[]) {
-    FutTask task;
+    // FutTask task;
     MonitorUsage usage(argc, argv);
     usage.PrintUsage();
     LinuxMonitor instance = LinuxMonitor::GetInstance();
     instance.Run(usage.GetParam());
-    task.Run();
+    // task.Run();
 }
