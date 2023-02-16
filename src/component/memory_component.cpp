@@ -1,4 +1,5 @@
-
+#include "json/json.h"
+#include "utils/json_util.h"
 #include "component/memory_component.h"
 
 MemoryComponent::MemoryComponent() : BaseComponent() {}
@@ -51,8 +52,20 @@ void MemoryComponent::ExportInfo() {
 
 
 std::string MemoryComponent::GetJsonInfo() {
-    std::string json_info;
-    return json_info;
+    auto raw_men_info = R"({"mem":{"mem_used":"0", "mem_avail":"0"}, "swap":{"swap_used":"0", "swap_free":"0"}})";
+    // auto json_info = R"({"result":""})";
+    MemoryInfo mem = GetMemoryInfo();
+    JsonAdapter jsoner;
+    Json::Value json_men_info = jsoner.Str2Json(raw_men_info);
+    json_men_info["mem"]["mem_used"] = std::to_string(mem.mem_used);
+    json_men_info["mem"]["mem_avail"] = std::to_string(mem.mem_avail);
+
+    json_men_info["swap"]["swap_used"] = std::to_string(mem.swap_used);
+    json_men_info["swap"]["swap_free"] = std::to_string(mem.swap_free);
+
+    std::string res;
+    res = jsoner.Json2Str(json_men_info);
+    return res;
 }
 
 std::int16_t MemoryComponent::parse_memory_info() {
@@ -67,6 +80,7 @@ std::int16_t MemoryComponent::parse_memory_info() {
 
     memory_info_.swap_total = parse_memory_item(strs, KSwapTotal);
     memory_info_.swap_free = parse_memory_item(strs, KSwapFree);
+    memory_info_.swap_used = memory_info_.swap_total - memory_info_.swap_free;
 
     return res;
 }
